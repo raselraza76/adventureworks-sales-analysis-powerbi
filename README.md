@@ -1,136 +1,95 @@
-# AdventureWorks Sales Analysis | Power BI
+# 🚴‍♂️ AdventureWorks Sales & Performance Analytics | Power BI Dashboard
 
-## 📊 Project Overview
-
-This project presents an interactive sales analytics dashboard
-built using Microsoft Power BI.
-
-The dashboard analyzes sales performance, orders, customers,
-products, profit margin, average order value, country-wise sales,
-sales trends, and return quantities.
-
-The goal of this project is to transform raw sales data into
-meaningful business insights through interactive data visualization.
+![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Analytics-yellow)
+![DAX](https://img.shields.io/badge/DAX-Advanced%20Calculations-blue)
+![Power Query](https://img.shields.io/badge/Power%20Query-ETL-green)
+![Data Analytics](https://img.shields.io/badge/Data%20Analytics-Business%20Intelligence-orange)
 
 ---
 
-## 🛠️ Tools & Technologies
+## 📌 Executive Summary
 
-- Microsoft Power BI
-- DAX
-- Power Query
-- Data Modeling
-- Data Cleaning
-- Data Visualization
+This project presents an interactive **sales and performance analytics solution built with Microsoft Power BI** using AdventureWorks sales data.
 
----
+The solution transforms raw transactional data into an interactive business intelligence dashboard designed to monitor **revenue performance, order trends, customer demographics, product performance, regional sales, profitability, and product returns**.
 
-## 📁 Dataset
-
-The dataset contains AdventureWorks sales transaction data.
-
-Main fields include:
-
-- Order Date
-- Stock Date
-- Order Number
-- Product Key
-- Customer Key
-- Territory Key
-- Order Line Item
-- Order Quantity
+The dashboard provides both **executive-level KPIs** and detailed analytical views, enabling users to identify key revenue drivers, understand customer behavior, evaluate product performance, monitor trends, and identify return-related business risks.
 
 ---
 
-## 📌 Dashboard Features
+## 🎯 Project Objectives
 
-### 🏠 Home Dashboard
+The primary objectives of this project are to:
 
-The main dashboard provides an overview of business performance,
-including:
-
-- Total Sales
-- Total Orders
-- Profit Margin
-- Average Order Value
-- Month-over-Month Sales
-- Month-over-Month Orders
-- Sales Trend
-- Annual Sales Trend
-- Quarterly Sales
-- Category-wise Sales
-- Country-wise Sales
-- Return Quantity by Category
+- Analyze overall sales and order performance
+- Identify the major revenue-generating product categories
+- Understand customer demographics and purchasing behavior
+- Compare sales performance across countries and territories
+- Analyze sales trends over time
+- Evaluate product and subcategory profitability
+- Monitor product return volume and return rates
+- Build interactive dashboards for business decision-making
+- Convert raw transactional data into actionable business insights
 
 ---
 
-## 📈 Key KPIs
+## ❓ Business Questions
 
-The dashboard tracks important business KPIs such as:
+This dashboard was designed to answer key business questions such as:
 
-- Total Sales
-- Total Orders
-- Profit Margin
-- Average Order Value (AOV)
-- Monthly Sales Growth
-- Monthly Order Growth
-- Previous Period Sales
-
----
-
-## 🔍 Analysis Performed
-
-### Sales Analysis
-- Monthly sales trends
-- Annual sales performance
-- Quarterly sales comparison
-- Category-wise sales
-- Country-wise sales
-
-### Customer Analysis
-- Customer performance
-- Customer trends
-- Customer segmentation
-
-### Product Analysis
-- Product performance
-- Category performance
-- Product-level sales analysis
-
-### Return Analysis
-- Return quantity
-- Return percentage
-- Category-wise return analysis
+1. What is the overall sales and order performance?
+2. Which product categories generate the most revenue?
+3. Which countries contribute the highest sales?
+4. How are sales changing month-over-month and year-over-year?
+5. Which customer demographics represent the most valuable segments?
+6. Which products and subcategories perform best?
+7. What is the overall profit margin?
+8. Which categories have the highest return rates?
+9. Which products contribute significantly to return volume?
+10. How does return performance vary across regions?
 
 ---
 
-## 📊 Dashboard Pages
+# 🛠️ Tech Stack & Methods
 
-### 1. Home
-Provides an overall business performance summary.
+### Business Intelligence
+- **Microsoft Power BI Desktop**
 
-### 2. Customer
-Analyzes customer-related sales performance.
+### Data Transformation & ETL
+- **Power Query**
+- Data cleaning
+- Data type transformation
+- Column optimization
+- Data preparation
+- Query transformation
+- ETL workflow
 
-### 3. Product
-Provides product and category-level analysis.
+### Calculations & Analytics
+- **DAX (Data Analysis Expressions)**
+- Calculated measures
+- Time-intelligence calculations
+- KPI calculations
+- Percentage calculations
+- Growth analysis
+- Return-rate calculations
 
-### 4. Trend
-Analyzes sales trends over time.
+### Data Modeling
+- **Star Schema**
+- Fact and Dimension table relationships
+- Date/Calendar dimension
+- One-to-many relationships
+- Relationship optimization
 
-### 5. Return
-Analyzes product return performance.
-
----
-
-## 💡 Key Insights
-
-- Identified overall sales and order performance.
-- Analyzed monthly and quarterly sales trends.
-- Compared sales performance across different countries.
-- Identified the highest-performing product categories.
-- Analyzed return percentage by category.
-- Monitored important business KPIs using Power BI.
+### Visualization
+- KPI Cards
+- Line Charts
+- Bar Charts
+- Column Charts
+- Slicers
+- Interactive filters
+- Trend analysis
+- Geographic analysis
+- Drill-down analysis
 
 ---
 
@@ -139,9 +98,39 @@ Analyzes product return performance.
 ![Home Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce.jpeg)
 
 
+# 🗂️ Data Architecture
 
----
+The analytical model follows a **Star Schema** approach.
 
+### Fact Tables
 
+- Sales
+- Returns
+
+### Dimension Tables
+
+- Customers
+- Products
+- Territories
+- Calendar
+
+This structure helps separate transactional data from descriptive attributes and supports efficient analytical reporting.
 
 ```text
+                    ┌───────────────┐
+                    │   Customers   │
+                    └───────┬───────┘
+                            │
+                            │
+┌──────────────┐      ┌─────▼──────┐      ┌───────────────┐
+│   Products   │──────│   Sales    │──────│  Territories  │
+└──────────────┘      └─────┬──────┘      └───────────────┘
+                            │
+                            │
+                    ┌───────▼───────┐
+                    │    Calendar   │
+                    └───────────────┘
+
+                    ┌───────────────┐
+                    │    Returns    │
+                    └───────────────┘
