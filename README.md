@@ -95,7 +95,21 @@ This dashboard was designed to answer key business questions such as:
 
 ## 📸 Dashboard Preview
 
+### 🏠 Home Dashboard
 ![Home Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce.jpeg)
+
+### 👥 Customer Dashboard
+![Customer Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce2.jpeg)
+
+### 📦 Product Dashboard
+![Product Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce3.jpeg)
+
+### 🔄 Return Dashboard
+![Return Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce4.jpeg)
+
+### 📈 Trend Dashboard
+![Trend Dashboard](https://raw.githubusercontent.com/raselraza76/adventureworks-sales-analysis-powerbi/main/ecommerce5.jpeg)
+
 
 
 # 🗂️ Data Architecture
